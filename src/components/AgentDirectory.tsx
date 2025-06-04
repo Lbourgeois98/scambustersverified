@@ -1,0 +1,104 @@
+import React, { useState } from 'react';
+import { agents } from '../data/agents';
+import { Search, CheckCircle, ExternalLink } from 'lucide-react';
+import { Agent } from '../types';
+
+const AgentDirectory: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [statusFilter, setStatusFilter] = useState<string>('all');
+  
+  const filteredAgents = agents.filter((agent) => {
+    const matchesSearch = agent.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                         agent.verificationId.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    const matchesStatus = statusFilter === 'all' ? true : agent.status === statusFilter;
+    
+    return matchesSearch && matchesStatus;
+  });
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Agent Directory</h2>
+        <p className="text-gray-600 mb-6">
+          Browse our directory of casino agents and their verification status.
+        </p>
+        
+        <div className="flex flex-col md:flex-row md:items-center md:space-x-4 space-y-4 md:space-y-0 mb-6">
+          <div className="relative flex-grow">
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              placeholder="Search by name or verification ID"
+              className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all"
+            />
+            <div className="absolute inset-y-0 left-0 flex items-center pl-3">
+              <Search className="h-5 w-5 text-gray-400" />
+            </div>
+          </div>
+          
+          <div className="flex-shrink-0">
+            <select
+              value={statusFilter}
+              onChange={(e) => setStatusFilter(e.target.value)}
+              className="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all"
+            >
+              <option value="all">All Statuses</option>
+              <option value="verified">Verified</option>
+              <option value="pending">Pending</option>
+              <option value="revoked">Revoked</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredAgents.map((agent) => (
+          <AgentCard key={agent.id} agent={agent} />
+        ))}
+        
+        {filteredAgents.length === 0 && (
+          <div className="col-span-full bg-gray-50 p-8 rounded-lg border border-gray-200 text-center">
+            <p className="text-gray-600">No agents found matching your search criteria.</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+interface AgentCardProps {
+  agent: Agent;
+}
+
+const AgentCard: React.FC<AgentCardProps> = ({ agent }) => {
+  return (
+    <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 transition-transform hover:transform hover:scale-105">
+      <div className="p-6">
+        <div className="flex justify-between items-start mb-4">
+          <div>
+            <h3 className="text-lg font-bold mb-2">{agent.name}</h3>
+            <p className="text-sm text-gray-600">ID: {agent.verificationId}</p>
+          </div>
+          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+            <CheckCircle className="h-4 w-4 text-green-500 mr-1" />
+            Verified
+          </span>
+        </div>
+        
+        <a 
+          href={agent.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition-colors text-center flex items-center justify-center mt-4"
+        >
+          Visit Agent's Page
+          <ExternalLink className="h-4 w-4 ml-2" />
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default AgentDirectory;
