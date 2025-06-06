@@ -16,38 +16,38 @@ const VerifyPage: React.FC = () => {
           </p>
         </div>
         
-        <div className="bg-black/60 backdrop-blur-sm rounded-lg p-6">
+        <div className="dark-box rounded-lg p-6">
           <VerificationSearch />
         </div>
         
         <div className="mt-16 max-w-3xl mx-auto">
-          <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg border border-gray-200 shadow-xl">
-            <h2 className="text-xl font-bold mb-4">Why Verification Matters</h2>
-            <p className="text-gray-600 mb-4">
+          <div className="dark-box p-6 rounded-lg">
+            <h2 className="text-xl font-bold mb-4 text-white">Why Verification Matters</h2>
+            <p className="text-gray-300 mb-4">
               Verification is a crucial step in ensuring your safety and security when dealing with online casino agents:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-white p-4 rounded-lg border border-gray-200">
-                <h3 className="font-medium text-lg mb-2">Protect Your Funds</h3>
-                <p className="text-gray-600">
+              <div className="dark-box-light p-4 rounded-lg">
+                <h3 className="font-medium text-lg mb-2 text-white">Protect Your Funds</h3>
+                <p className="text-gray-300">
                   Verified agents have demonstrated financial stability and proper fund handling procedures.
                 </p>
               </div>
-              <div className="bg-white p-4 rounded-lg border border-gray-200">
-                <h3 className="font-medium text-lg mb-2">Ensure Fair Play</h3>
-                <p className="text-gray-600">
+              <div className="dark-box-light p-4 rounded-lg">
+                <h3 className="font-medium text-lg mb-2 text-white">Ensure Fair Play</h3>
+                <p className="text-gray-300">
                   Verified agents work with licensed game providers that use certified random number generators.
                 </p>
               </div>
-              <div className="bg-white p-4 rounded-lg border border-gray-200">
-                <h3 className="font-medium text-lg mb-2">Reliable Support</h3>
-                <p className="text-gray-600">
+              <div className="dark-box-light p-4 rounded-lg">
+                <h3 className="font-medium text-lg mb-2 text-white">Reliable Support</h3>
+                <p className="text-gray-300">
                   Verified agents maintain proper customer support channels and dispute resolution procedures.
                 </p>
               </div>
-              <div className="bg-white p-4 rounded-lg border border-gray-200">
-                <h3 className="font-medium text-lg mb-2">Data Protection</h3>
-                <p className="text-gray-600">
+              <div className="dark-box-light p-4 rounded-lg">
+                <h3 className="font-medium text-lg mb-2 text-white">Data Protection</h3>
+                <p className="text-gray-300">
                   Verified agents implement proper security measures to protect your personal and financial information.
                 </p>
               </div>

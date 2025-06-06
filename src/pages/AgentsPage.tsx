@@ -13,7 +13,7 @@ const AgentsPage: React.FC = () => {
           </p>
         </div>
         
-        <div className="bg-black/60 backdrop-blur-sm rounded-lg p-6">
+        <div className="dark-box rounded-lg p-6">
           <AgentDirectory />
         </div>
       </div>

@@ -22,7 +22,7 @@
     overflow-x: hidden;
   }
 
-  /* Fire background layers */
+  /* Moving flames background */
   body::before {
     content: '';
     position: fixed;
@@ -30,15 +30,15 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -2;
+    z-index: -3;
     background: 
-      radial-gradient(ellipse 800px 600px at 20% 80%, #ff4500 0%, #ff6347 15%, transparent 50%),
-      radial-gradient(ellipse 600px 800px at 80% 20%, #ff8c00 0%, #ffa500 20%, transparent 60%),
-      radial-gradient(ellipse 700px 500px at 40% 60%, #dc143c 0%, #ff4500 25%, transparent 65%),
-      radial-gradient(ellipse 500px 700px at 70% 90%, #ff1493 0%, #ff6347 15%, transparent 50%),
-      radial-gradient(ellipse 900px 400px at 10% 30%, #8b0000 0%, #ff4500 30%, transparent 70%),
-      linear-gradient(45deg, #1a0000 0%, #4d0000 25%, #800000 50%, #cc0000 75%, #ff3300 100%);
-    animation: fireMove 15s ease-in-out infinite;
+      radial-gradient(ellipse 400px 800px at 10% 100%, #ff4500 0%, #ff6347 20%, #ff8c00 40%, transparent 70%),
+      radial-gradient(ellipse 500px 600px at 90% 80%, #dc143c 0%, #ff4500 25%, #ffa500 50%, transparent 75%),
+      radial-gradient(ellipse 300px 700px at 30% 90%, #ff1493 0%, #ff6347 30%, transparent 60%),
+      radial-gradient(ellipse 600px 400px at 70% 100%, #8b0000 0%, #ff4500 35%, transparent 65%),
+      radial-gradient(ellipse 450px 900px at 50% 85%, #ff8c00 0%, #ffa500 20%, transparent 50%),
+      linear-gradient(0deg, #1a0000 0%, #4d0000 30%, #800000 60%, #cc0000 85%, #ff3300 100%);
+    animation: flameRise 12s ease-in-out infinite;
   }
 
   body::after {
@@ -48,14 +48,32 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: -2;
+    background: 
+      radial-gradient(ellipse 350px 600px at 20% 95%, rgba(255, 69, 0, 0.9) 0%, rgba(255, 140, 0, 0.6) 30%, transparent 60%),
+      radial-gradient(ellipse 400px 500px at 80% 90%, rgba(220, 20, 60, 0.8) 0%, rgba(255, 99, 71, 0.5) 35%, transparent 65%),
+      radial-gradient(ellipse 250px 800px at 60% 100%, rgba(255, 140, 0, 0.7) 0%, rgba(255, 165, 0, 0.4) 25%, transparent 55%),
+      radial-gradient(ellipse 500px 350px at 40% 95%, rgba(139, 0, 0, 0.9) 0%, rgba(255, 69, 0, 0.6) 40%, transparent 70%),
+      radial-gradient(ellipse 300px 700px at 75% 85%, rgba(255, 20, 147, 0.8) 0%, rgba(255, 99, 71, 0.4) 30%, transparent 60%);
+    animation: flameDance 8s ease-in-out infinite alternate;
+  }
+
+  /* Additional flame layer for more realistic movement */
+  .fire-overlay::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
     background: 
-      radial-gradient(circle 400px at 30% 70%, rgba(255, 69, 0, 0.8) 0%, rgba(255, 140, 0, 0.4) 40%, transparent 70%),
-      radial-gradient(circle 500px at 70% 30%, rgba(255, 140, 0, 0.7) 0%, rgba(255, 99, 71, 0.3) 35%, transparent 65%),
-      radial-gradient(circle 350px at 50% 90%, rgba(220, 20, 60, 0.9) 0%, rgba(255, 69, 0, 0.4) 45%, transparent 75%),
-      radial-gradient(circle 600px at 10% 50%, rgba(255, 99, 71, 0.6) 0%, rgba(255, 165, 0, 0.2) 30%, transparent 60%),
-      radial-gradient(circle 450px at 85% 85%, rgba(139, 0, 0, 0.8) 0%, rgba(255, 69, 0, 0.3) 50%, transparent 80%);
-    animation: fireFlicker 8s ease-in-out infinite alternate;
+      radial-gradient(ellipse 200px 400px at 15% 100%, rgba(255, 69, 0, 0.6) 0%, transparent 50%),
+      radial-gradient(ellipse 180px 350px at 85% 95%, rgba(255, 140, 0, 0.7) 0%, transparent 45%),
+      radial-gradient(ellipse 220px 500px at 45% 100%, rgba(220, 20, 60, 0.5) 0%, transparent 55%),
+      radial-gradient(ellipse 160px 300px at 65% 95%, rgba(255, 99, 71, 0.8) 0%, transparent 40%),
+      radial-gradient(ellipse 190px 450px at 25% 90%, rgba(255, 165, 0, 0.6) 0%, transparent 50%);
+    animation: flameFlicker 6s ease-in-out infinite;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -80,7 +98,21 @@
   .fire-overlay {
     position: relative;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.1);
+  }
+
+  /* Dark box styles */
+  .dark-box {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .dark-box-light {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -126,53 +158,89 @@
     }
   }
 
-  @keyframes fireMove {
+  /* Flame animation keyframes */
+  @keyframes flameRise {
     0% {
-      transform: translate(0%, 0%) rotate(0deg) scale(1);
-      opacity: 0.9;
+      transform: translateY(0%) scale(1) rotate(0deg);
+      opacity: 0.8;
     }
     25% {
-      transform: translate(-3%, -5%) rotate(1deg) scale(1.05);
+      transform: translateY(-5%) scale(1.1) rotate(1deg);
       opacity: 1;
     }
     50% {
-      transform: translate(-6%, 3%) rotate(-0.5deg) scale(0.98);
-      opacity: 0.8;
+      transform: translateY(-10%) scale(0.95) rotate(-0.5deg);
+      opacity: 0.9;
     }
     75% {
-      transform: translate(4%, -2%) rotate(0.8deg) scale(1.02);
+      transform: translateY(-7%) scale(1.05) rotate(0.8deg);
       opacity: 0.95;
     }
     100% {
-      transform: translate(0%, 0%) rotate(0deg) scale(1);
-      opacity: 0.9;
+      transform: translateY(0%) scale(1) rotate(0deg);
+      opacity: 0.8;
     }
   }
 
-  @keyframes fireFlicker {
+  @keyframes flameDance {
     0% {
+      transform: translateX(0%) translateY(0%) scale(1) rotate(0deg);
       opacity: 0.7;
-      transform: translate(0%, 0%) scale(1) rotate(0deg);
     }
     20% {
+      transform: translateX(-2%) translateY(-8%) scale(1.15) rotate(1.5deg);
       opacity: 0.9;
-      transform: translate(2%, -3%) scale(1.08) rotate(0.5deg);
     }
     40% {
+      transform: translateX(3%) translateY(-15%) scale(0.9) rotate(-1deg);
       opacity: 0.6;
-      transform: translate(-1%, 2%) scale(0.95) rotate(-0.3deg);
     }
     60% {
+      transform: translateX(-1%) translateY(-12%) scale(1.08) rotate(1.2deg);
       opacity: 0.85;
-      transform: translate(3%, -1%) scale(1.03) rotate(0.4deg);
     }
     80% {
-      opacity: 0.5;
-      transform: translate(-2%, 1%) scale(0.97) rotate(-0.2deg);
+      transform: translateX(2%) translateY(-6%) scale(0.95) rotate(-0.8deg);
+      opacity: 0.75;
     }
     100% {
+      transform: translateX(0%) translateY(0%) scale(1) rotate(0deg);
       opacity: 0.7;
-      transform: translate(0%, 0%) scale(1) rotate(0deg);
+    }
+  }
+
+  @keyframes flameFlicker {
+    0% {
+      opacity: 0.4;
+      transform: translateY(0%) scale(1);
+    }
+    15% {
+      opacity: 0.8;
+      transform: translateY(-3%) scale(1.2);
+    }
+    30% {
+      opacity: 0.3;
+      transform: translateY(-8%) scale(0.8);
+    }
+    45% {
+      opacity: 0.7;
+      transform: translateY(-12%) scale(1.1);
+    }
+    60% {
+      opacity: 0.5;
+      transform: translateY(-6%) scale(0.9);
+    }
+    75% {
+      opacity: 0.9;
+      transform: translateY(-10%) scale(1.15);
+    }
+    90% {
+      opacity: 0.6;
+      transform: translateY(-4%) scale(0.95);
+    }
+    100% {
+      opacity: 0.4;
+      transform: translateY(0%) scale(1);
     }
   }
 

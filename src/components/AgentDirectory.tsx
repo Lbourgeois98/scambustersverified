@@ -31,7 +31,7 @@ const AgentDirectory: React.FC = () => {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search by name or verification ID"
-              className="w-full px-4 py-2 pl-10 bg-white/90 backdrop-blur-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all"
+              className="w-full px-4 py-2 pl-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all text-white placeholder-gray-400"
             />
             <div className="absolute inset-y-0 left-0 flex items-center pl-3">
               <Search className="h-5 w-5 text-gray-400" />
@@ -42,12 +42,12 @@ const AgentDirectory: React.FC = () => {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="w-full md:w-auto px-4 py-2 bg-white/90 backdrop-blur-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all"
+              className="w-full md:w-auto px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all text-white"
             >
-              <option value="all">All Statuses</option>
-              <option value="verified">Verified</option>
-              <option value="pending">Pending</option>
-              <option value="revoked">Revoked</option>
+              <option value="all" className="bg-black text-white">All Statuses</option>
+              <option value="verified" className="bg-black text-white">Verified</option>
+              <option value="pending" className="bg-black text-white">Pending</option>
+              <option value="revoked" className="bg-black text-white">Revoked</option>
             </select>
           </div>
         </div>
@@ -59,8 +59,8 @@ const AgentDirectory: React.FC = () => {
         ))}
         
         {filteredAgents.length === 0 && (
-          <div className="col-span-full bg-white/90 backdrop-blur-sm p-8 rounded-lg border border-gray-200 text-center">
-            <p className="text-gray-600">No agents found matching your search criteria.</p>
+          <div className="col-span-full dark-box-light p-8 rounded-lg text-center">
+            <p className="text-gray-300">No agents found matching your search criteria.</p>
           </div>
         )}
       </div>
@@ -74,15 +74,15 @@ interface AgentCardProps {
 
 const AgentCard: React.FC<AgentCardProps> = ({ agent }) => {
   return (
-    <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-xl overflow-hidden border border-gray-200 transition-transform hover:transform hover:scale-105">
+    <div className="dark-box-light rounded-lg overflow-hidden transition-transform hover:transform hover:scale-105">
       <div className="p-6">
         <div className="flex justify-between items-start mb-4">
           <div>
-            <h3 className="text-lg font-bold mb-2">{agent.name}</h3>
-            <p className="text-sm text-gray-600">ID: {agent.verificationId}</p>
+            <h3 className="text-lg font-bold mb-2 text-white">{agent.name}</h3>
+            <p className="text-sm text-gray-400">ID: {agent.verificationId}</p>
           </div>
-          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-            <CheckCircle className="h-4 w-4 text-green-500 mr-1" />
+          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-500/20 text-green-400 border border-green-500/30">
+            <CheckCircle className="h-4 w-4 text-green-400 mr-1" />
             Verified
           </span>
         </div>
@@ -91,7 +91,7 @@ const AgentCard: React.FC<AgentCardProps> = ({ agent }) => {
           href={agent.website}
           target="_blank"
           rel="noopener noreferrer"
-          className="block w-full bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition-colors text-center flex items-center justify-center mt-4"
+          className="block w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-medium py-2 px-4 rounded-lg transition-all text-center flex items-center justify-center mt-4"
         >
           Visit Agent's Page
           <ExternalLink className="h-4 w-4 ml-2" />
