@@ -23,15 +23,7 @@ const HomePage: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="dark-box p-6 rounded-lg text-center">
-                <div className="mb-4 relative">
-                  <div className="absolute -inset-2 bg-red-500 rounded-full blur-lg opacity-75 animate-pulse"></div>
-                  <img 
-                    src="https://stackblitz.com/storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQy9BRkFFPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--651f549cc15858305c3b16d54e5115b2fd98331b//darren.jpg" 
-                    alt="Darren Boykin" 
-                    className="relative w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
-                  />
-                </div>
-                <h3 className="font-bold text-lg mb-2 text-white">Darren Boykin</h3>
+                <h3 className="font-bold text-lg mb-4 text-white">Darren Boykin</h3>
                 <a 
                   href="https://www.facebook.com/share/16tXMhVYMu/" 
                   target="_blank" 
@@ -44,15 +36,7 @@ const HomePage: React.FC = () => {
               </div>
               
               <div className="dark-box p-6 rounded-lg text-center">
-                <div className="mb-4 relative">
-                  <div className="absolute -inset-2 bg-pink-500 rounded-full blur-lg opacity-75 animate-pulse"></div>
-                  <img 
-                    src="https://stackblitz.com/storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRERBRkFFPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--797689efaf3363391536d490b15ed580ef667abc//brittney.jpg" 
-                    alt="Brittney Kellar" 
-                    className="relative w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
-                  />
-                </div>
-                <h3 className="font-bold text-lg mb-2 text-white">Brittney Kellar</h3>
+                <h3 className="font-bold text-lg mb-4 text-white">Brittney Kellar</h3>
                 <a 
                   href="https://www.facebook.com/share/16MJsPzPtf/" 
                   target="_blank" 
@@ -65,15 +49,7 @@ const HomePage: React.FC = () => {
               </div>
               
               <div className="dark-box p-6 rounded-lg text-center">
-                <div className="mb-4 relative">
-                  <div className="absolute -inset-2 bg-green-500 rounded-full blur-lg opacity-75 animate-pulse"></div>
-                  <img 
-                    src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                    alt="LeAnn Bourgeois" 
-                    className="relative w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
-                  />
-                </div>
-                <h3 className="font-bold text-lg mb-2 text-white">LeAnn Bourgeois</h3>
+                <h3 className="font-bold text-lg mb-4 text-white">LeAnn Bourgeois</h3>
                 <a 
                   href="https://www.facebook.com/share/16ahBG51EL/" 
                   target="_blank" 
