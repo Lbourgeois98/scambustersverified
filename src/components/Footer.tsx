@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <img src="/logo-no-bg.png" alt="ScamBusters Logo" className="h-12 mr-2" />
+              <img src="/logo.png" alt="ScamBusters Logo" className="h-12 mr-2" />
             </div>
             <p className="text-gray-400 mb-4">
               Your trusted partner in casino agent verification. 
@@ -35,8 +35,67 @@ const Footer: React.FC = () => {
             </div>
           </div>
           
-          {/* Rest of the footer content remains the same */}
-          {/* ... */}
+          <div>
+            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/" className="text-gray-400 hover:text-gold-400 transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/verify" className="text-gray-400 hover:text-gold-400 transition-colors">
+                  Verify Agent
+                </Link>
+              </li>
+              <li>
+                <Link href="/agents" className="text-gray-400 hover:text-gold-400 transition-colors">
+                  Verified Agents
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-gray-400 hover:text-gold-400 transition-colors">
+                  About Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-bold mb-4">Services</h3>
+            <ul className="space-y-2">
+              <li>
+                <span className="text-gray-400">Agent Verification</span>
+              </li>
+              <li>
+                <span className="text-gray-400">Player Protection</span>
+              </li>
+              <li>
+                <span className="text-gray-400">Fraud Prevention</span>
+              </li>
+              <li>
+                <span className="text-gray-400">Compliance Monitoring</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-bold mb-4">Contact</h3>
+            <div className="space-y-2">
+              <div className="flex items-center text-gray-400">
+                <Mail className="h-4 w-4 mr-2" />
+                <span>support@scambusters.com</span>
+              </div>
+              <div className="flex items-center text-gray-400">
+                <Phone className="h-4 w-4 mr-2" />
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center text-gray-400">
+                <Globe className="h-4 w-4 mr-2" />
+                <span>www.scambusters.com</span>
+              </div>
+            </div>
+          </div>
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-6 text-center text-gray-500 text-sm">
