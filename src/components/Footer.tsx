@@ -1,12 +1,12 @@
 import React from 'react';
-import { Mail, Phone, Globe, Facebook, MessagesSquare } from 'lucide-react';
+import { Facebook, MessagesSquare } from 'lucide-react';
 import { Link } from './Link';
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-black text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center mb-4">
               <img src="/logo-Photoroom.png" alt="ScamBusters Logo" className="h-12 mr-2" />
@@ -77,24 +77,6 @@ const Footer: React.FC = () => {
                 <span className="text-gray-400">Compliance Monitoring</span>
               </li>
             </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-bold mb-4">Contact</h3>
-            <div className="space-y-2">
-              <div className="flex items-center text-gray-400">
-                <Mail className="h-4 w-4 mr-2" />
-                <span>support@scambusters.com</span>
-              </div>
-              <div className="flex items-center text-gray-400">
-                <Phone className="h-4 w-4 mr-2" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center text-gray-400">
-                <Globe className="h-4 w-4 mr-2" />
-                <span>www.scambusters.com</span>
-              </div>
-            </div>
           </div>
         </div>
         

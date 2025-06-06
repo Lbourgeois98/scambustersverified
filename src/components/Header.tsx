@@ -44,7 +44,7 @@ const Header: React.FC = () => {
           <Link href="/" className="text-white hover:text-gold-400 transition-colors">Home</Link>
           <Link href="/verify" className="text-white hover:text-gold-400 transition-colors">Verify Agent</Link>
           <Link href="/agents" className="text-white hover:text-gold-400 transition-colors">Verified Agents</Link>
-          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeYH_a1WojCnwy_qVJXPq5zR_ARUgpzcRdisZ66nmCsCnpubg/viewform?usp=header" className="text-white hover:text-gold-400 transition-colors">Apply for Verification</Link>
+          <Link href="/apply" className="text-white hover:text-gold-400 transition-colors">Apply for Verification</Link>
           <Link href="/about" className="text-white hover:text-gold-400 transition-colors">About Us</Link>
           <button 
             onClick={handleContactAdmins}
@@ -97,7 +97,7 @@ const Header: React.FC = () => {
               Verified Agents
             </Link>
             <Link 
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeYH_a1WojCnwy_qVJXPq5zR_ARUgpzcRdisZ66nmCsCnpubg/viewform?usp=header" 
+              href="/apply" 
               className="text-white hover:text-gold-400 transition-colors py-2 border-b border-gray-800"
               onClick={() => setIsMenuOpen(false)}
             >
