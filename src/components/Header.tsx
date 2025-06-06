@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Search, Users } from 'lucide-react';
+import { Menu, X, Users } from 'lucide-react';
 import { Link } from './Link';
 
 const Header: React.FC = () => {
@@ -53,13 +53,6 @@ const Header: React.FC = () => {
             <Users className="h-4 w-4 mr-2" />
             Contact Admins
           </button>
-          <Link 
-            href="/verify" 
-            className="bg-red-800 hover:bg-red-900 text-white px-4 py-2 rounded-lg transition-colors flex items-center"
-          >
-            <Search className="h-4 w-4 mr-2" />
-            Verify Now
-          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -120,14 +113,6 @@ const Header: React.FC = () => {
               <Users className="h-4 w-4 mr-2" />
               Contact Admins
             </button>
-            <Link 
-              href="/verify" 
-              className="bg-red-800 hover:bg-red-900 text-white px-4 py-2 rounded-lg transition-colors flex items-center justify-center"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <Search className="h-4 w-4 mr-2" />
-              Verify Now
-            </Link>
           </nav>
         </div>
       )}
