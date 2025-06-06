@@ -17,12 +17,12 @@
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: #000;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%, #0a0a0a 100%);
     position: relative;
     overflow-x: hidden;
   }
 
-  /* Smooth moving flames background */
+  /* Casino elements background layer 1 */
   body::before {
     content: '';
     position: fixed;
@@ -31,17 +31,29 @@
     width: 120vw;
     height: 120vh;
     z-index: -3;
-    background: 
-      radial-gradient(ellipse 800px 1200px at 15% 100%, rgba(255, 69, 0, 0.8) 0%, rgba(255, 140, 0, 0.6) 25%, rgba(255, 99, 71, 0.4) 50%, transparent 75%),
-      radial-gradient(ellipse 600px 900px at 85% 90%, rgba(220, 20, 60, 0.7) 0%, rgba(255, 69, 0, 0.5) 30%, rgba(255, 165, 0, 0.3) 60%, transparent 80%),
-      radial-gradient(ellipse 700px 1000px at 50% 95%, rgba(255, 140, 0, 0.6) 0%, rgba(255, 99, 71, 0.4) 35%, rgba(255, 165, 0, 0.2) 70%, transparent 85%),
-      radial-gradient(ellipse 500px 800px at 25% 85%, rgba(139, 0, 0, 0.8) 0%, rgba(255, 69, 0, 0.6) 40%, rgba(255, 140, 0, 0.3) 75%, transparent 90%),
-      radial-gradient(ellipse 900px 600px at 75% 100%, rgba(255, 20, 147, 0.5) 0%, rgba(255, 99, 71, 0.3) 45%, rgba(255, 165, 0, 0.2) 80%, transparent 95%),
-      linear-gradient(0deg, #1a0000 0%, #4d0000 25%, #800000 50%, #cc0000 75%, #ff3300 100%);
-    filter: blur(2px);
-    animation: flameRise 20s ease-in-out infinite;
+    background-image: 
+      /* Poker chips */
+      radial-gradient(circle 20px at 15% 20%, rgba(220, 20, 60, 0.8) 0%, rgba(220, 20, 60, 0.6) 40%, transparent 50%),
+      radial-gradient(circle 15px at 85% 30%, rgba(212, 175, 55, 0.9) 0%, rgba(212, 175, 55, 0.7) 40%, transparent 50%),
+      radial-gradient(circle 18px at 25% 60%, rgba(34, 139, 34, 0.8) 0%, rgba(34, 139, 34, 0.6) 40%, transparent 50%),
+      radial-gradient(circle 22px at 75% 70%, rgba(25, 25, 112, 0.8) 0%, rgba(25, 25, 112, 0.6) 40%, transparent 50%),
+      radial-gradient(circle 16px at 45% 85%, rgba(220, 20, 60, 0.7) 0%, rgba(220, 20, 60, 0.5) 40%, transparent 50%),
+      
+      /* Card suits */
+      radial-gradient(ellipse 30px 40px at 60% 15%, rgba(220, 20, 60, 0.6) 0%, transparent 60%),
+      radial-gradient(ellipse 25px 35px at 30% 40%, rgba(0, 0, 0, 0.8) 0%, transparent 60%),
+      radial-gradient(ellipse 28px 38px at 80% 55%, rgba(220, 20, 60, 0.7) 0%, transparent 60%),
+      radial-gradient(ellipse 32px 42px at 20% 80%, rgba(0, 0, 0, 0.9) 0%, transparent 60%),
+      
+      /* Dice dots */
+      radial-gradient(circle 8px at 70% 25%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 30%, transparent 40%),
+      radial-gradient(circle 6px at 40% 50%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.6) 30%, transparent 40%),
+      radial-gradient(circle 7px at 90% 75%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 30%, transparent 40%);
+    
+    animation: casinoFloat1 25s ease-in-out infinite;
   }
 
+  /* Casino elements background layer 2 */
   body::after {
     content: '';
     position: fixed;
@@ -50,18 +62,28 @@
     width: 120vw;
     height: 120vh;
     z-index: -2;
-    background: 
-      radial-gradient(ellipse 600px 1000px at 30% 95%, rgba(255, 69, 0, 0.6) 0%, rgba(255, 140, 0, 0.4) 35%, rgba(255, 99, 71, 0.2) 70%, transparent 85%),
-      radial-gradient(ellipse 800px 700px at 70% 90%, rgba(220, 20, 60, 0.5) 0%, rgba(255, 99, 71, 0.3) 40%, rgba(255, 165, 0, 0.2) 75%, transparent 90%),
-      radial-gradient(ellipse 500px 1200px at 60% 100%, rgba(255, 140, 0, 0.7) 0%, rgba(255, 165, 0, 0.4) 30%, rgba(255, 99, 71, 0.2) 65%, transparent 80%),
-      radial-gradient(ellipse 700px 600px at 40% 85%, rgba(139, 0, 0, 0.6) 0%, rgba(255, 69, 0, 0.4) 45%, rgba(255, 140, 0, 0.2) 80%, transparent 95%),
-      radial-gradient(ellipse 400px 900px at 80% 95%, rgba(255, 20, 147, 0.4) 0%, rgba(255, 99, 71, 0.2) 50%, rgba(255, 165, 0, 0.1) 85%, transparent 100%);
-    filter: blur(1px);
-    animation: flameDance 15s ease-in-out infinite alternate;
+    background-image:
+      /* More poker chips */
+      radial-gradient(circle 17px at 35% 25%, rgba(212, 175, 55, 0.8) 0%, rgba(212, 175, 55, 0.6) 40%, transparent 50%),
+      radial-gradient(circle 19px at 65% 45%, rgba(25, 25, 112, 0.7) 0%, rgba(25, 25, 112, 0.5) 40%, transparent 50%),
+      radial-gradient(circle 21px at 20% 65%, rgba(34, 139, 34, 0.8) 0%, rgba(34, 139, 34, 0.6) 40%, transparent 50%),
+      radial-gradient(circle 14px at 80% 80%, rgba(220, 20, 60, 0.9) 0%, rgba(220, 20, 60, 0.7) 40%, transparent 50%),
+      
+      /* Slot machine symbols */
+      radial-gradient(ellipse 35px 35px at 50% 20%, rgba(255, 215, 0, 0.8) 0%, rgba(255, 215, 0, 0.4) 50%, transparent 70%),
+      radial-gradient(ellipse 30px 30px at 25% 50%, rgba(255, 69, 0, 0.7) 0%, rgba(255, 69, 0, 0.3) 50%, transparent 70%),
+      radial-gradient(ellipse 32px 32px at 75% 75%, rgba(138, 43, 226, 0.8) 0%, rgba(138, 43, 226, 0.4) 50%, transparent 70%),
+      
+      /* Casino sparkles */
+      radial-gradient(circle 4px at 15% 35%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 20%, transparent 30%),
+      radial-gradient(circle 3px at 85% 60%, rgba(212, 175, 55, 1) 0%, rgba(212, 175, 55, 0.8) 20%, transparent 30%),
+      radial-gradient(circle 5px at 55% 85%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 20%, transparent 30%);
+    
+    animation: casinoFloat2 20s ease-in-out infinite reverse;
   }
 
-  /* Additional smooth flame layer */
-  .fire-overlay::before {
+  /* Additional casino elements layer */
+  .casino-overlay::before {
     content: '';
     position: fixed;
     top: 0;
@@ -69,14 +91,30 @@
     width: 110vw;
     height: 110vh;
     z-index: -1;
-    background: 
-      radial-gradient(ellipse 400px 600px at 20% 100%, rgba(255, 69, 0, 0.4) 0%, rgba(255, 140, 0, 0.2) 50%, transparent 75%),
-      radial-gradient(ellipse 350px 500px at 80% 95%, rgba(255, 140, 0, 0.5) 0%, rgba(255, 99, 71, 0.3) 45%, transparent 70%),
-      radial-gradient(ellipse 450px 700px at 45% 100%, rgba(220, 20, 60, 0.3) 0%, rgba(255, 69, 0, 0.2) 55%, transparent 80%),
-      radial-gradient(ellipse 300px 450px at 65% 90%, rgba(255, 99, 71, 0.6) 0%, rgba(255, 165, 0, 0.3) 40%, transparent 65%),
-      radial-gradient(ellipse 380px 650px at 25% 85%, rgba(255, 165, 0, 0.4) 0%, rgba(255, 140, 0, 0.2) 50%, transparent 75%);
-    filter: blur(0.5px);
-    animation: flameFlicker 12s ease-in-out infinite;
+    background-image:
+      /* Roulette wheel segments */
+      conic-gradient(from 0deg at 20% 30%, 
+        rgba(220, 20, 60, 0.6) 0deg, 
+        rgba(0, 0, 0, 0.8) 18deg, 
+        rgba(220, 20, 60, 0.6) 36deg, 
+        rgba(0, 0, 0, 0.8) 54deg, 
+        transparent 72deg),
+      conic-gradient(from 45deg at 80% 70%, 
+        rgba(34, 139, 34, 0.7) 0deg, 
+        rgba(0, 0, 0, 0.9) 20deg, 
+        rgba(34, 139, 34, 0.7) 40deg, 
+        rgba(0, 0, 0, 0.9) 60deg, 
+        transparent 80deg),
+      
+      /* Playing cards */
+      linear-gradient(45deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 20%, transparent 25%) 60% 40% / 40px 60px,
+      linear-gradient(-45deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.6) 20%, transparent 25%) 30% 70% / 35px 55px,
+      
+      /* Money symbols */
+      radial-gradient(circle 12px at 45% 25%, rgba(34, 139, 34, 0.8) 0%, rgba(34, 139, 34, 0.4) 50%, transparent 60%),
+      radial-gradient(circle 10px at 75% 55%, rgba(212, 175, 55, 0.9) 0%, rgba(212, 175, 55, 0.5) 50%, transparent 60%);
+    
+    animation: casinoSpin 30s linear infinite;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -98,7 +136,7 @@
   .border-gold-400 { border-color: var(--color-gold-400); }
   .border-gold-500 { border-color: var(--color-gold-500); }
 
-  .fire-overlay {
+  .casino-overlay {
     position: relative;
     z-index: 1;
   }
@@ -161,101 +199,77 @@
     }
   }
 
-  /* Smooth flame animation keyframes */
-  @keyframes flameRise {
+  /* Casino element animations */
+  @keyframes casinoFloat1 {
     0% {
       transform: translateY(0%) translateX(0%) scale(1) rotate(0deg);
       opacity: 0.8;
-    }
-    20% {
-      transform: translateY(-3%) translateX(-1%) scale(1.05) rotate(0.5deg);
-      opacity: 0.9;
-    }
-    40% {
-      transform: translateY(-7%) translateX(1%) scale(0.98) rotate(-0.3deg);
-      opacity: 0.85;
-    }
-    60% {
-      transform: translateY(-10%) translateX(-0.5%) scale(1.02) rotate(0.4deg);
-      opacity: 0.95;
-    }
-    80% {
-      transform: translateY(-5%) translateX(0.8%) scale(0.96) rotate(-0.2deg);
-      opacity: 0.88;
-    }
-    100% {
-      transform: translateY(0%) translateX(0%) scale(1) rotate(0deg);
-      opacity: 0.8;
-    }
-  }
-
-  @keyframes flameDance {
-    0% {
-      transform: translateX(0%) translateY(0%) scale(1) rotate(0deg);
-      opacity: 0.7;
-    }
-    15% {
-      transform: translateX(-1.5%) translateY(-4%) scale(1.08) rotate(0.8deg);
-      opacity: 0.85;
-    }
-    30% {
-      transform: translateX(2%) translateY(-8%) scale(0.94) rotate(-0.6deg);
-      opacity: 0.6;
-    }
-    45% {
-      transform: translateX(-0.8%) translateY(-12%) scale(1.06) rotate(0.7deg);
-      opacity: 0.9;
-    }
-    60% {
-      transform: translateX(1.5%) translateY(-9%) scale(0.97) rotate(-0.4deg);
-      opacity: 0.75;
-    }
-    75% {
-      transform: translateX(-1%) translateY(-6%) scale(1.03) rotate(0.5deg);
-      opacity: 0.82;
-    }
-    90% {
-      transform: translateX(0.5%) translateY(-3%) scale(0.99) rotate(-0.3deg);
-      opacity: 0.78;
-    }
-    100% {
-      transform: translateX(0%) translateY(0%) scale(1) rotate(0deg);
-      opacity: 0.7;
-    }
-  }
-
-  @keyframes flameFlicker {
-    0% {
-      opacity: 0.4;
-      transform: translateY(0%) translateX(0%) scale(1);
-    }
-    10% {
-      opacity: 0.7;
-      transform: translateY(-2%) translateX(-0.5%) scale(1.15);
     }
     25% {
-      opacity: 0.3;
-      transform: translateY(-6%) translateX(1%) scale(0.85);
-    }
-    40% {
-      opacity: 0.8;
-      transform: translateY(-9%) translateX(-0.8%) scale(1.1);
-    }
-    55% {
-      opacity: 0.5;
-      transform: translateY(-7%) translateX(0.6%) scale(0.92);
-    }
-    70% {
+      transform: translateY(-3%) translateX(-2%) scale(1.05) rotate(90deg);
       opacity: 0.9;
-      transform: translateY(-11%) translateX(-0.3%) scale(1.12);
     }
-    85% {
-      opacity: 0.6;
-      transform: translateY(-4%) translateX(0.4%) scale(0.96);
+    50% {
+      transform: translateY(-6%) translateX(1%) scale(0.95) rotate(180deg);
+      opacity: 0.7;
+    }
+    75% {
+      transform: translateY(-4%) translateX(-1%) scale(1.02) rotate(270deg);
+      opacity: 0.85;
     }
     100% {
+      transform: translateY(0%) translateX(0%) scale(1) rotate(360deg);
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes casinoFloat2 {
+    0% {
+      transform: translateX(0%) translateY(0%) scale(1) rotate(0deg);
+      opacity: 0.6;
+    }
+    20% {
+      transform: translateX(-2%) translateY(-4%) scale(1.08) rotate(-72deg);
+      opacity: 0.8;
+    }
+    40% {
+      transform: translateX(3%) translateY(-7%) scale(0.92) rotate(-144deg);
+      opacity: 0.5;
+    }
+    60% {
+      transform: translateX(-1%) translateY(-5%) scale(1.06) rotate(-216deg);
+      opacity: 0.75;
+    }
+    80% {
+      transform: translateX(2%) translateY(-2%) scale(0.98) rotate(-288deg);
+      opacity: 0.65;
+    }
+    100% {
+      transform: translateX(0%) translateY(0%) scale(1) rotate(-360deg);
+      opacity: 0.6;
+    }
+  }
+
+  @keyframes casinoSpin {
+    0% {
+      transform: rotate(0deg) scale(1);
       opacity: 0.4;
-      transform: translateY(0%) translateX(0%) scale(1);
+    }
+    25% {
+      transform: rotate(90deg) scale(1.1);
+      opacity: 0.6;
+    }
+    50% {
+      transform: rotate(180deg) scale(0.9);
+      opacity: 0.3;
+    }
+    75% {
+      transform: rotate(270deg) scale(1.05);
+      opacity: 0.5;
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+      opacity: 0.4;
     }
   }
 

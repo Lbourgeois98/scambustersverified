@@ -43,7 +43,7 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen fire-overlay">
+    <div className="flex flex-col min-h-screen casino-overlay">
       <Header />
       <main className="flex-grow">
         {renderPage()}
