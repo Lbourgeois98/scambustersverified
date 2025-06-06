@@ -2,8 +2,13 @@ import { agents } from '../data/agents';
 import { VerificationResult } from '../types';
 
 export const verifyAgent = (verificationId: string): VerificationResult => {
-  const formattedId = verificationId.trim().toUpperCase();
-  const agent = agents.find(a => a.verificationId === formattedId);
+  const searchTerm = verificationId.trim().toLowerCase();
+  
+  // Search by verification ID or agent name (case-insensitive)
+  const agent = agents.find(a => 
+    a.verificationId.toLowerCase() === searchTerm || 
+    a.name.toLowerCase().includes(searchTerm)
+  );
   
   if (!agent) {
     return { found: false };

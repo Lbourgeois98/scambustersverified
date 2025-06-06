@@ -8,8 +8,10 @@ const AgentDirectory: React.FC = () => {
   const [statusFilter, setStatusFilter] = useState<string>('all');
   
   const filteredAgents = agents.filter((agent) => {
-    const matchesSearch = agent.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                         agent.verificationId.toLowerCase().includes(searchTerm.toLowerCase());
+    const searchLower = searchTerm.toLowerCase();
+    const matchesSearch = searchTerm === '' || 
+                         agent.name.toLowerCase().includes(searchLower) || 
+                         agent.verificationId.toLowerCase().includes(searchLower);
     
     const matchesStatus = statusFilter === 'all' ? true : agent.status === statusFilter;
     
@@ -30,7 +32,7 @@ const AgentDirectory: React.FC = () => {
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Search by name or verification ID"
+              placeholder="Search by agent name or verification ID"
               className="w-full px-4 py-2 pl-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all text-white placeholder-gray-400"
             />
             <div className="absolute inset-y-0 left-0 flex items-center pl-3">

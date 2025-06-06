@@ -14,7 +14,7 @@ const VerificationSearch: React.FC = () => {
     e.preventDefault();
     
     if (!verificationId.trim()) {
-      setError('Please enter a verification ID');
+      setError('Please enter a verification ID or agent name');
       return;
     }
     
@@ -37,7 +37,7 @@ const VerificationSearch: React.FC = () => {
             Verify Casino Agent
           </h2>
           <p className="text-white/80">
-            Enter the verification ID provided by the agent to confirm their legitimacy
+            Enter the verification ID or agent name to confirm their legitimacy
           </p>
         </div>
         
@@ -48,7 +48,7 @@ const VerificationSearch: React.FC = () => {
                 type="text"
                 value={verificationId}
                 onChange={(e) => setVerificationId(e.target.value)}
-                placeholder="Enter verification ID (e.g., SB-12345)"
+                placeholder="Enter verification ID (e.g., SB-12345) or agent name"
                 className={`w-full px-4 py-3 pl-12 pr-4 bg-white/10 backdrop-blur-sm border ${error ? 'border-red-500' : 'border-white/20'} rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all text-white placeholder-gray-400`}
               />
               <div className="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -89,7 +89,7 @@ const VerificationSearch: React.FC = () => {
               <h3 className="font-medium text-white mb-2">How to verify an agent?</h3>
               <ol className="list-decimal pl-5 text-gray-300 space-y-2">
                 <li>Ask the agent for their ScamBusters verification ID</li>
-                <li>Enter the ID in the search box above</li>
+                <li>Enter the ID or agent name in the search box above</li>
                 <li>Check the verification details and current status</li>
                 <li>Confirm the agent's identity before proceeding</li>
               </ol>
