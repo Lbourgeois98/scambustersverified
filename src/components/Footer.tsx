@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
                 href="https://www.facebook.com/groups/1529993591011245/?ref=share&mibextid=NSMWBT" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-gray-400 hover:text-gold-400 transition-colors"
+                className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg transition-colors"
               >
                 <Facebook className="h-5 w-5" />
               </a>
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
                 href="https://m.me/j/Aba6iSHafKh901ZD/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-gray-400 hover:text-gold-400 transition-colors"
+                className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg transition-colors"
               >
                 <MessagesSquare className="h-5 w-5" />
               </a>
@@ -39,22 +39,22 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-gray-400 hover:text-gold-400 transition-colors">
+                <Link href="/" className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/verify" className="text-gray-400 hover:text-gold-400 transition-colors">
+                <Link href="/verify" className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">
                   Verify Agent
                 </Link>
               </li>
               <li>
-                <Link href="/agents" className="text-gray-400 hover:text-gold-400 transition-colors">
+                <Link href="/agents" className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">
                   Verified Agents
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-gold-400 transition-colors">
+                <Link href="/about" className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">
                   About Us
                 </Link>
               </li>
@@ -65,16 +65,16 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-bold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <span className="text-gray-400">Agent Verification</span>
+                <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-lg">Agent Verification</span>
               </li>
               <li>
-                <span className="text-gray-400">Player Protection</span>
+                <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-lg">Player Protection</span>
               </li>
               <li>
-                <span className="text-gray-400">Fraud Prevention</span>
+                <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-lg">Fraud Prevention</span>
               </li>
               <li>
-                <span className="text-gray-400">Compliance Monitoring</span>
+                <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-lg">Compliance Monitoring</span>
               </li>
             </ul>
           </div>

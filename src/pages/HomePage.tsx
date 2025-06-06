@@ -30,7 +30,7 @@ const HomePage: React.FC = () => {
                     href="https://www.facebook.com/share/16tXMhVYMu/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors"
+                    className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
                   >
                     <Facebook className="h-5 w-5 mr-2" />
                     Contact on Facebook
@@ -46,7 +46,7 @@ const HomePage: React.FC = () => {
                     href="https://www.facebook.com/share/16MJsPzPtf/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors"
+                    className="inline-flex items-center bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-lg transition-colors"
                   >
                     <Facebook className="h-5 w-5 mr-2" />
                     Contact on Facebook
@@ -62,7 +62,7 @@ const HomePage: React.FC = () => {
                     href="https://www.facebook.com/share/16ahBG51EL/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors"
+                    className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors"
                   >
                     <Facebook className="h-5 w-5 mr-2" />
                     Contact on Facebook
@@ -78,7 +78,7 @@ const HomePage: React.FC = () => {
                   href="https://www.facebook.com/groups/1529993591011245/?ref=share&mibextid=NSMWBT"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center dark-box-light p-4 rounded-lg text-red-400 hover:text-red-300 transition-colors"
+                  className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-lg transition-colors"
                 >
                   <Facebook className="h-5 w-5 mr-2" />
                   Join our Facebook Group
@@ -87,7 +87,7 @@ const HomePage: React.FC = () => {
                   href="https://m.me/j/Aba6iSHafKh901ZD/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center dark-box-light p-4 rounded-lg text-red-400 hover:text-red-300 transition-colors"
+                  className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-lg transition-colors"
                 >
                   <MessagesSquare className="h-5 w-5 mr-2" />
                   Join our Group Chat
