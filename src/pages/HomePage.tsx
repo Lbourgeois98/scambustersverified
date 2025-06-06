@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
                 <div className="mb-4 relative">
                   <div className="absolute -inset-2 bg-red-500 rounded-full blur-lg opacity-75 animate-pulse"></div>
                   <img 
-                    src="/darren.jpg" 
+                    src="/darren-boykin.jpg" 
                     alt="Darren Boykin" 
                     className="relative w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
                   />
@@ -59,7 +59,7 @@ const HomePage: React.FC = () => {
                 <div className="mb-4 relative">
                   <div className="absolute -inset-2 bg-pink-500 rounded-full blur-lg opacity-75 animate-pulse"></div>
                   <img 
-                    src="/brittney.jpg" 
+                    src="/brittney-kellar.jpg" 
                     alt="Brittney Kellar" 
                     className="relative w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
                   />
@@ -80,7 +80,7 @@ const HomePage: React.FC = () => {
                 <div className="mb-4 relative">
                   <div className="absolute -inset-2 bg-green-500 rounded-full blur-lg opacity-75 animate-pulse"></div>
                   <img 
-                    src="/leann.jpg" 
+                    src="/leann-bourgeois.jpg" 
                     alt="LeAnn Bourgeois" 
                     className="relative w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
                   />
