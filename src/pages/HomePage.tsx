@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
                 <div className="mb-4 relative">
                   <div className="absolute -inset-2 bg-red-500 rounded-full blur-lg opacity-75 animate-pulse"></div>
                   <img 
-                    src="/darren.jpg" 
+                    src="https://stackblitz.com/storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQy9BRkFFPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--651f549cc15858305c3b16d54e5115b2fd98331b//darren.jpg" 
                     alt="Darren Boykin" 
                     className="relative w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
                     onError={(e) => {
@@ -51,7 +51,7 @@ const HomePage: React.FC = () => {
                 <div className="mb-4 relative">
                   <div className="absolute -inset-2 bg-pink-500 rounded-full blur-lg opacity-75 animate-pulse"></div>
                   <img 
-                    src="/brittney.jpg" 
+                    src="https://stackblitz.com/storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRERBRkFFPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--797689efaf3363391536d490b15ed580ef667abc//brittney.jpg" 
                     alt="Brittney Kellar" 
                     className="relative w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
                     onError={(e) => {
