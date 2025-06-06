@@ -14,7 +14,7 @@ const HeroSection: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center text-center mb-12">
           <img 
-            src="/logo-no-bg.png" 
+            src="/logo-Photoroom.png" 
             alt="ScamBusters Logo" 
             className="w-64 md:w-96 mb-8 animate-float"
           />

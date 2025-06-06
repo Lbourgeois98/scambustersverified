@@ -35,11 +35,12 @@ const HomePage: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center">
-                <div className="mb-4">
+                <div className="mb-4 relative">
+                  <div className="absolute -inset-2 bg-red-500 rounded-full blur-lg opacity-75 animate-pulse"></div>
                   <img 
-                    src="/darren-boykin.jpg" 
+                    src="/darren.jpg" 
                     alt="Darren Boykin" 
-                    className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-red-600"
+                    className="relative w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
                   />
                 </div>
                 <h3 className="font-bold text-lg mb-2">Darren Boykin</h3>
@@ -55,11 +56,12 @@ const HomePage: React.FC = () => {
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center">
-                <div className="mb-4">
+                <div className="mb-4 relative">
+                  <div className="absolute -inset-2 bg-pink-500 rounded-full blur-lg opacity-75 animate-pulse"></div>
                   <img 
-                    src="/brittney-kellar.jpg" 
+                    src="/brittney.jpg" 
                     alt="Brittney Kellar" 
-                    className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-red-600"
+                    className="relative w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
                   />
                 </div>
                 <h3 className="font-bold text-lg mb-2">Brittney Kellar</h3>
@@ -75,11 +77,12 @@ const HomePage: React.FC = () => {
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center">
-                <div className="mb-4">
+                <div className="mb-4 relative">
+                  <div className="absolute -inset-2 bg-green-500 rounded-full blur-lg opacity-75 animate-pulse"></div>
                   <img 
-                    src="/leann-bourgeois.jpg" 
+                    src="/leann.jpg" 
                     alt="LeAnn Bourgeois" 
-                    className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-red-600"
+                    className="relative w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
                   />
                 </div>
                 <h3 className="font-bold text-lg mb-2">LeAnn Bourgeois</h3>

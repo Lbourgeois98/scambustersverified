@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <img src="/logo-no-bg.png" alt="ScamBusters Logo" className="h-12 mr-2" />
+              <img src="/logo-Photoroom.png" alt="ScamBusters Logo" className="h-12 mr-2" />
             </div>
             <p className="text-gray-400 mb-4">
               Your trusted partner in casino agent verification. 
