@@ -19,6 +19,9 @@ export const Link: React.FC<LinkProps> = ({ href, children, ...props }) => {
     window.history.pushState({}, '', href);
     // Dispatch a popstate event to trigger the route change
     window.dispatchEvent(new PopStateEvent('popstate'));
+    
+    // Scroll to top of page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
