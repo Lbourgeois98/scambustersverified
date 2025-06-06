@@ -23,7 +23,7 @@ const HomePage: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="relative">
-                <div className="absolute -inset-1 bg-red-500 rounded-lg blur-lg opacity-75 animate-pulse"></div>
+                <div className="absolute -inset-1 bg-blue-500 rounded-lg blur-lg opacity-75 animate-pulse"></div>
                 <div className="relative dark-box p-6 rounded-lg text-center">
                   <h3 className="font-bold text-lg mb-4 text-white">Darren Boykin</h3>
                   <a 
