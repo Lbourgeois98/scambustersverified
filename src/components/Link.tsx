@@ -17,8 +17,10 @@ export const Link: React.FC<LinkProps> = ({ href, children, onClick, ...props })
     
     // Handle internal navigation
     window.history.pushState({}, '', href);
-    // Dispatch a popstate event to trigger the route change
+    
+    // Dispatch both popstate and custom navigation events
     window.dispatchEvent(new PopStateEvent('popstate'));
+    window.dispatchEvent(new CustomEvent('navigation'));
     
     // Scroll to top of page
     window.scrollTo({ top: 0, behavior: 'smooth' });

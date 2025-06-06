@@ -15,10 +15,19 @@ function App() {
       setCurrentPath(window.location.pathname);
     };
 
+    // Listen for navigation changes
     window.addEventListener('popstate', handlePopState);
+
+    // Also listen for custom navigation events
+    const handleNavigation = () => {
+      setCurrentPath(window.location.pathname);
+    };
+
+    window.addEventListener('navigation', handleNavigation);
 
     return () => {
       window.removeEventListener('popstate', handlePopState);
+      window.removeEventListener('navigation', handleNavigation);
     };
   }, []);
 
