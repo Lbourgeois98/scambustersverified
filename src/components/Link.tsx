@@ -5,13 +5,13 @@ interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   children: React.ReactNode;
 }
 
-export const Link: React.FC<LinkProps> = ({ href, children, ...props }) => {
+export const Link: React.FC<LinkProps> = ({ href, children, onClick, ...props }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     
     // Check if the URL is external
     if (href.startsWith('http') || href.startsWith('https')) {
-      window.location.href = href;
+      window.open(href, '_blank', 'noopener,noreferrer');
       return;
     }
     
@@ -22,6 +22,11 @@ export const Link: React.FC<LinkProps> = ({ href, children, ...props }) => {
     
     // Scroll to top of page
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Call the original onClick if provided
+    if (onClick) {
+      onClick(e);
+    }
   };
 
   return (
