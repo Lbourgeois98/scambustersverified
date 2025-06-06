@@ -22,43 +22,52 @@ const HomePage: React.FC = () => {
           
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="dark-box p-6 rounded-lg text-center">
-                <h3 className="font-bold text-lg mb-4 text-white">Darren Boykin</h3>
-                <a 
-                  href="https://www.facebook.com/share/16tXMhVYMu/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors"
-                >
-                  <Facebook className="h-5 w-5 mr-2" />
-                  Contact on Facebook
-                </a>
+              <div className="relative">
+                <div className="absolute -inset-1 bg-red-500 rounded-lg blur-lg opacity-75 animate-pulse"></div>
+                <div className="relative dark-box p-6 rounded-lg text-center">
+                  <h3 className="font-bold text-lg mb-4 text-white">Darren Boykin</h3>
+                  <a 
+                    href="https://www.facebook.com/share/16tXMhVYMu/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors"
+                  >
+                    <Facebook className="h-5 w-5 mr-2" />
+                    Contact on Facebook
+                  </a>
+                </div>
               </div>
               
-              <div className="dark-box p-6 rounded-lg text-center">
-                <h3 className="font-bold text-lg mb-4 text-white">Brittney Kellar</h3>
-                <a 
-                  href="https://www.facebook.com/share/16MJsPzPtf/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors"
-                >
-                  <Facebook className="h-5 w-5 mr-2" />
-                  Contact on Facebook
-                </a>
+              <div className="relative">
+                <div className="absolute -inset-1 bg-pink-500 rounded-lg blur-lg opacity-75 animate-pulse"></div>
+                <div className="relative dark-box p-6 rounded-lg text-center">
+                  <h3 className="font-bold text-lg mb-4 text-white">Brittney Kellar</h3>
+                  <a 
+                    href="https://www.facebook.com/share/16MJsPzPtf/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors"
+                  >
+                    <Facebook className="h-5 w-5 mr-2" />
+                    Contact on Facebook
+                  </a>
+                </div>
               </div>
               
-              <div className="dark-box p-6 rounded-lg text-center">
-                <h3 className="font-bold text-lg mb-4 text-white">LeAnn Bourgeois</h3>
-                <a 
-                  href="https://www.facebook.com/share/16ahBG51EL/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors"
-                >
-                  <Facebook className="h-5 w-5 mr-2" />
-                  Contact on Facebook
-                </a>
+              <div className="relative">
+                <div className="absolute -inset-1 bg-green-500 rounded-lg blur-lg opacity-75 animate-pulse"></div>
+                <div className="relative dark-box p-6 rounded-lg text-center">
+                  <h3 className="font-bold text-lg mb-4 text-white">LeAnn Bourgeois</h3>
+                  <a 
+                    href="https://www.facebook.com/share/16ahBG51EL/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors"
+                  >
+                    <Facebook className="h-5 w-5 mr-2" />
+                    Contact on Facebook
+                  </a>
+                </div>
               </div>
             </div>
             
