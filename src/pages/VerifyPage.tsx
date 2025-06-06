@@ -10,16 +10,18 @@ const VerifyPage: React.FC = () => {
           <div className="inline-flex justify-center items-center p-2 bg-red-600 rounded-full mb-4">
             <Shield className="h-8 w-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold mb-4">Verify Casino Agent</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h1 className="text-3xl font-bold mb-4 text-white">Verify Casino Agent</h1>
+          <p className="text-gray-300 max-w-2xl mx-auto">
             Enter the verification ID provided by your casino agent to confirm their legitimacy and ensure a safe gaming experience.
           </p>
         </div>
         
-        <VerificationSearch />
+        <div className="bg-black/60 backdrop-blur-sm rounded-lg p-6">
+          <VerificationSearch />
+        </div>
         
         <div className="mt-16 max-w-3xl mx-auto">
-          <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+          <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg border border-gray-200 shadow-xl">
             <h2 className="text-xl font-bold mb-4">Why Verification Matters</h2>
             <p className="text-gray-600 mb-4">
               Verification is a crucial step in ensuring your safety and security when dealing with online casino agents:

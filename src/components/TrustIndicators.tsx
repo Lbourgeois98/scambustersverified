@@ -3,17 +3,17 @@ import { Shield, Check, AlertTriangle, UserCheck, Clock, Award } from 'lucide-re
 
 const TrustIndicators: React.FC = () => {
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 bg-black/60 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Why Trust <span className="text-red-600">Scam</span><span className="text-gold-500">Busters</span>?</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold mb-4 text-white">Why Trust <span className="text-red-600">Scam</span><span className="text-gold-500">Busters</span>?</h2>
+          <p className="text-gray-300 max-w-2xl mx-auto">
             Our comprehensive verification process ensures that players can trust verified agents and enjoy a safe gaming experience.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:transform hover:scale-105">
+          <div className="bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-xl transition-transform hover:transform hover:scale-105">
             <div className="bg-red-100 p-3 rounded-full inline-block mb-4">
               <Shield className="h-8 w-8 text-red-600" />
             </div>
@@ -23,7 +23,7 @@ const TrustIndicators: React.FC = () => {
             </p>
           </div>
           
-          <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:transform hover:scale-105">
+          <div className="bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-xl transition-transform hover:transform hover:scale-105">
             <div className="bg-gold-100 p-3 rounded-full inline-block mb-4">
               <Check className="h-8 w-8 text-gold-600" />
             </div>
@@ -33,7 +33,7 @@ const TrustIndicators: React.FC = () => {
             </p>
           </div>
           
-          <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:transform hover:scale-105">
+          <div className="bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-xl transition-transform hover:transform hover:scale-105">
             <div className="bg-red-100 p-3 rounded-full inline-block mb-4">
               <AlertTriangle className="h-8 w-8 text-red-600" />
             </div>
@@ -43,7 +43,7 @@ const TrustIndicators: React.FC = () => {
             </p>
           </div>
           
-          <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:transform hover:scale-105">
+          <div className="bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-xl transition-transform hover:transform hover:scale-105">
             <div className="bg-gold-100 p-3 rounded-full inline-block mb-4">
               <UserCheck className="h-8 w-8 text-gold-600" />
             </div>
@@ -53,7 +53,7 @@ const TrustIndicators: React.FC = () => {
             </p>
           </div>
           
-          <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:transform hover:scale-105">
+          <div className="bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-xl transition-transform hover:transform hover:scale-105">
             <div className="bg-red-100 p-3 rounded-full inline-block mb-4">
               <Clock className="h-8 w-8 text-red-600" />
             </div>
@@ -63,7 +63,7 @@ const TrustIndicators: React.FC = () => {
             </p>
           </div>
           
-          <div className="bg-white p-6 rounded-lg shadow-md transition-transform hover:transform hover:scale-105">
+          <div className="bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-xl transition-transform hover:transform hover:scale-105">
             <div className="bg-gold-100 p-3 rounded-full inline-block mb-4">
               <Award className="h-8 w-8 text-gold-600" />
             </div>
