@@ -22,35 +22,36 @@
   body::before {
     content: '';
     position: fixed;
-    top: 0;
-    left: 0;
+    top: -50%;
+    left: -50%;
     width: 200%;
     height: 200%;
     z-index: -2;
     background: 
-      radial-gradient(circle at 20% 80%, #ff4500 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, #ff6347 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, #ff8c00 0%, transparent 50%),
-      radial-gradient(circle at 60% 80%, #dc143c 0%, transparent 50%),
-      radial-gradient(circle at 90% 60%, #ff1493 0%, transparent 50%),
-      linear-gradient(45deg, #8b0000 0%, #ff4500 25%, #ffa500 50%, #ff6347 75%, #8b0000 100%);
-    animation: fireMove 8s ease-in-out infinite;
+      radial-gradient(ellipse at 20% 80%, #ff4500 0%, #ff6347 20%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, #ff8c00 0%, #ffa500 25%, transparent 65%),
+      radial-gradient(ellipse at 40% 40%, #dc143c 0%, #ff4500 30%, transparent 70%),
+      radial-gradient(ellipse at 60% 80%, #ff1493 0%, #ff6347 20%, transparent 55%),
+      radial-gradient(ellipse at 90% 60%, #8b0000 0%, #ff4500 35%, transparent 75%),
+      linear-gradient(135deg, #1a0000 0%, #4d0000 20%, #800000 40%, #cc0000 60%, #ff3300 80%, #ff6600 100%);
+    animation: fireMove 12s ease-in-out infinite;
   }
 
   body::after {
     content: '';
     position: fixed;
-    top: 0;
-    left: 0;
+    top: -50%;
+    left: -50%;
     width: 200%;
     height: 200%;
     z-index: -1;
     background: 
-      radial-gradient(circle at 30% 70%, rgba(255, 69, 0, 0.8) 0%, transparent 40%),
-      radial-gradient(circle at 70% 30%, rgba(255, 140, 0, 0.6) 0%, transparent 40%),
-      radial-gradient(circle at 50% 90%, rgba(220, 20, 60, 0.7) 0%, transparent 40%),
-      radial-gradient(circle at 10% 50%, rgba(255, 99, 71, 0.5) 0%, transparent 40%);
-    animation: fireFlicker 4s ease-in-out infinite alternate;
+      radial-gradient(circle at 30% 70%, rgba(255, 69, 0, 0.9) 0%, rgba(255, 140, 0, 0.6) 30%, transparent 60%),
+      radial-gradient(circle at 70% 30%, rgba(255, 140, 0, 0.8) 0%, rgba(255, 99, 71, 0.5) 25%, transparent 55%),
+      radial-gradient(circle at 50% 90%, rgba(220, 20, 60, 0.9) 0%, rgba(255, 69, 0, 0.6) 35%, transparent 65%),
+      radial-gradient(circle at 10% 50%, rgba(255, 99, 71, 0.7) 0%, rgba(255, 165, 0, 0.4) 20%, transparent 50%),
+      radial-gradient(circle at 85% 85%, rgba(139, 0, 0, 0.8) 0%, rgba(255, 69, 0, 0.5) 40%, transparent 70%);
+    animation: fireFlicker 6s ease-in-out infinite alternate;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -121,40 +122,47 @@
   }
 
   @keyframes fireMove {
-    0%, 100% {
-      transform: translate(-10%, -10%) rotate(0deg) scale(1);
+    0% {
+      transform: translate(0%, 0%) rotate(0deg) scale(1);
     }
     25% {
-      transform: translate(-5%, -15%) rotate(1deg) scale(1.1);
+      transform: translate(-5%, -8%) rotate(2deg) scale(1.1);
     }
     50% {
-      transform: translate(-15%, -5%) rotate(-1deg) scale(0.9);
+      transform: translate(-10%, 5%) rotate(-1deg) scale(0.95);
     }
     75% {
-      transform: translate(-8%, -12%) rotate(0.5deg) scale(1.05);
+      transform: translate(8%, -3%) rotate(1.5deg) scale(1.05);
+    }
+    100% {
+      transform: translate(0%, 0%) rotate(0deg) scale(1);
     }
   }
 
   @keyframes fireFlicker {
     0% {
-      opacity: 0.7;
-      transform: translate(0%, 0%) scale(1);
-    }
-    25% {
-      opacity: 0.9;
-      transform: translate(2%, -3%) scale(1.1);
-    }
-    50% {
-      opacity: 0.6;
-      transform: translate(-2%, 2%) scale(0.95);
-    }
-    75% {
       opacity: 0.8;
-      transform: translate(1%, -1%) scale(1.05);
+      transform: translate(0%, 0%) scale(1) rotate(0deg);
+    }
+    20% {
+      opacity: 1;
+      transform: translate(3%, -4%) scale(1.1) rotate(1deg);
+    }
+    40% {
+      opacity: 0.7;
+      transform: translate(-2%, 3%) scale(0.9) rotate(-0.5deg);
+    }
+    60% {
+      opacity: 0.9;
+      transform: translate(4%, -2%) scale(1.05) rotate(0.8deg);
+    }
+    80% {
+      opacity: 0.6;
+      transform: translate(-3%, 1%) scale(0.95) rotate(-0.3deg);
     }
     100% {
-      opacity: 0.7;
-      transform: translate(-1%, 1%) scale(1);
+      opacity: 0.8;
+      transform: translate(0%, 0%) scale(1) rotate(0deg);
     }
   }
 
