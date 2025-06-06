@@ -26,13 +26,9 @@ const HomePage: React.FC = () => {
                 <div className="mb-4 relative">
                   <div className="absolute -inset-2 bg-red-500 rounded-full blur-lg opacity-75 animate-pulse"></div>
                   <img 
-                    src="https://stackblitz.com/storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQy9BRkFFPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--651f549cc15858305c3b16d54e5115b2fd98331b//darren.jpg" 
+                    src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400" 
                     alt="Darren Boykin" 
                     className="relative w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
-                    onError={(e) => {
-                      console.log('Failed to load darren.jpg');
-                      e.currentTarget.src = 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400';
-                    }}
                   />
                 </div>
                 <h3 className="font-bold text-lg mb-2 text-white">Darren Boykin</h3>
@@ -51,13 +47,9 @@ const HomePage: React.FC = () => {
                 <div className="mb-4 relative">
                   <div className="absolute -inset-2 bg-pink-500 rounded-full blur-lg opacity-75 animate-pulse"></div>
                   <img 
-                    src="https://stackblitz.com/storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRERBRkFFPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--797689efaf3363391536d490b15ed580ef667abc//brittney.jpg" 
+                    src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400" 
                     alt="Brittney Kellar" 
                     className="relative w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
-                    onError={(e) => {
-                      console.log('Failed to load brittney.jpg');
-                      e.currentTarget.src = 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=400';
-                    }}
                   />
                 </div>
                 <h3 className="font-bold text-lg mb-2 text-white">Brittney Kellar</h3>
@@ -76,13 +68,9 @@ const HomePage: React.FC = () => {
                 <div className="mb-4 relative">
                   <div className="absolute -inset-2 bg-green-500 rounded-full blur-lg opacity-75 animate-pulse"></div>
                   <img 
-                    src="/leann.jpg" 
+                    src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400" 
                     alt="LeAnn Bourgeois" 
                     className="relative w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
-                    onError={(e) => {
-                      console.log('Failed to load leann.jpg');
-                      e.currentTarget.src = 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400';
-                    }}
                   />
                 </div>
                 <h3 className="font-bold text-lg mb-2 text-white">LeAnn Bourgeois</h3>
