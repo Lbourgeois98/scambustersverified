@@ -37,7 +37,7 @@ const HomePage: React.FC = () => {
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center">
                 <div className="mb-4">
                   <img 
-                    src="/logo.png" 
+                    src="/darren-boykin.jpg" 
                     alt="Darren Boykin" 
                     className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-red-600"
                   />
@@ -57,7 +57,7 @@ const HomePage: React.FC = () => {
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center">
                 <div className="mb-4">
                   <img 
-                    src="/logo.png" 
+                    src="/brittney-kellar.jpg" 
                     alt="Brittney Kellar" 
                     className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-red-600"
                   />
@@ -77,7 +77,7 @@ const HomePage: React.FC = () => {
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center">
                 <div className="mb-4">
                   <img 
-                    src="/logo.png" 
+                    src="/leann-bourgeois.jpg" 
                     alt="LeAnn Bourgeois" 
                     className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-red-600"
                   />
