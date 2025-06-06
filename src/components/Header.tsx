@@ -44,7 +44,6 @@ const Header: React.FC = () => {
           <Link href="/" className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">Home</Link>
           <Link href="/verify" className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">Verify Agent</Link>
           <Link href="/agents" className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">Verified Agents</Link>
-          <Link href="/games" className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">Game Links</Link>
           <Link href="/apply" className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">Apply for Verification</Link>
           <Link href="/about" className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">About Us</Link>
           <button 
@@ -96,13 +95,6 @@ const Header: React.FC = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Verified Agents
-            </Link>
-            <Link 
-              href="/games" 
-              className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors text-center"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Game Links
             </Link>
             <Link 
               href="/apply" 

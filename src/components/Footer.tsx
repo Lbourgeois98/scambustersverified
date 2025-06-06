@@ -54,11 +54,6 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/games" className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">
-                  Game Links
-                </Link>
-              </li>
-              <li>
                 <Link href="/about" className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">
                   About Us
                 </Link>
