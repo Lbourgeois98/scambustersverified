@@ -17,12 +17,12 @@
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%, #0a0a0a 100%);
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 25%, #2a0a0a 50%, #1a0a0a 75%, #0a0a0a 100%);
     position: relative;
     overflow-x: hidden;
   }
 
-  /* Shield elements background layer 1 */
+  /* Fire elements background layer 1 */
   body::before {
     content: '';
     position: fixed;
@@ -32,28 +32,28 @@
     height: 120vh;
     z-index: -3;
     background-image: 
-      /* Large shields */
-      radial-gradient(ellipse 40px 50px at 15% 20%, rgba(220, 20, 60, 0.8) 0%, rgba(220, 20, 60, 0.6) 30%, rgba(220, 20, 60, 0.3) 60%, transparent 80%),
-      radial-gradient(ellipse 35px 45px at 85% 30%, rgba(212, 175, 55, 0.9) 0%, rgba(212, 175, 55, 0.7) 30%, rgba(212, 175, 55, 0.4) 60%, transparent 80%),
-      radial-gradient(ellipse 38px 48px at 25% 60%, rgba(34, 139, 34, 0.8) 0%, rgba(34, 139, 34, 0.6) 30%, rgba(34, 139, 34, 0.3) 60%, transparent 80%),
-      radial-gradient(ellipse 42px 52px at 75% 70%, rgba(25, 25, 112, 0.8) 0%, rgba(25, 25, 112, 0.6) 30%, rgba(25, 25, 112, 0.3) 60%, transparent 80%),
-      radial-gradient(ellipse 36px 46px at 45% 85%, rgba(220, 20, 60, 0.7) 0%, rgba(220, 20, 60, 0.5) 30%, rgba(220, 20, 60, 0.2) 60%, transparent 80%),
+      /* Large flames */
+      radial-gradient(ellipse 60px 120px at 15% 20%, rgba(255, 69, 0, 0.9) 0%, rgba(255, 140, 0, 0.7) 30%, rgba(255, 215, 0, 0.5) 60%, transparent 80%),
+      radial-gradient(ellipse 45px 90px at 85% 30%, rgba(220, 20, 60, 0.8) 0%, rgba(255, 69, 0, 0.6) 30%, rgba(255, 140, 0, 0.4) 60%, transparent 80%),
+      radial-gradient(ellipse 55px 110px at 25% 60%, rgba(255, 0, 0, 0.9) 0%, rgba(255, 69, 0, 0.7) 30%, rgba(255, 215, 0, 0.5) 60%, transparent 80%),
+      radial-gradient(ellipse 50px 100px at 75% 70%, rgba(255, 140, 0, 0.8) 0%, rgba(255, 215, 0, 0.6) 30%, rgba(255, 255, 0, 0.4) 60%, transparent 80%),
+      radial-gradient(ellipse 40px 80px at 45% 85%, rgba(255, 69, 0, 0.7) 0%, rgba(255, 140, 0, 0.5) 30%, rgba(255, 215, 0, 0.3) 60%, transparent 80%),
       
-      /* Medium shields */
-      radial-gradient(ellipse 25px 32px at 60% 15%, rgba(138, 43, 226, 0.6) 0%, rgba(138, 43, 226, 0.4) 40%, transparent 70%),
-      radial-gradient(ellipse 28px 36px at 30% 40%, rgba(255, 69, 0, 0.8) 0%, rgba(255, 69, 0, 0.5) 40%, transparent 70%),
-      radial-gradient(ellipse 26px 34px at 80% 55%, rgba(0, 191, 255, 0.7) 0%, rgba(0, 191, 255, 0.4) 40%, transparent 70%),
-      radial-gradient(ellipse 30px 38px at 20% 80%, rgba(255, 20, 147, 0.9) 0%, rgba(255, 20, 147, 0.6) 40%, transparent 70%),
+      /* Medium flames */
+      radial-gradient(ellipse 35px 70px at 60% 15%, rgba(255, 0, 0, 0.8) 0%, rgba(255, 69, 0, 0.6) 40%, rgba(255, 140, 0, 0.3) 70%, transparent 90%),
+      radial-gradient(ellipse 30px 60px at 30% 40%, rgba(255, 69, 0, 0.9) 0%, rgba(255, 140, 0, 0.7) 40%, rgba(255, 215, 0, 0.4) 70%, transparent 90%),
+      radial-gradient(ellipse 38px 76px at 80% 55%, rgba(220, 20, 60, 0.7) 0%, rgba(255, 69, 0, 0.5) 40%, rgba(255, 140, 0, 0.3) 70%, transparent 90%),
+      radial-gradient(ellipse 32px 64px at 20% 80%, rgba(255, 140, 0, 0.8) 0%, rgba(255, 215, 0, 0.6) 40%, rgba(255, 255, 0, 0.4) 70%, transparent 90%),
       
-      /* Small shields */
-      radial-gradient(ellipse 18px 24px at 70% 25%, rgba(255, 215, 0, 0.9) 0%, rgba(255, 215, 0, 0.6) 50%, transparent 80%),
-      radial-gradient(ellipse 16px 22px at 40% 50%, rgba(50, 205, 50, 0.8) 0%, rgba(50, 205, 50, 0.5) 50%, transparent 80%),
-      radial-gradient(ellipse 20px 26px at 90% 75%, rgba(255, 99, 71, 0.9) 0%, rgba(255, 99, 71, 0.6) 50%, transparent 80%);
+      /* Fire sparks */
+      radial-gradient(circle 8px at 70% 25%, rgba(255, 255, 255, 1) 0%, rgba(255, 215, 0, 0.8) 30%, transparent 50%),
+      radial-gradient(circle 6px at 40% 50%, rgba(255, 215, 0, 1) 0%, rgba(255, 140, 0, 0.8) 30%, transparent 50%),
+      radial-gradient(circle 10px at 90% 75%, rgba(255, 255, 255, 1) 0%, rgba(255, 69, 0, 0.8) 30%, transparent 50%);
     
-    animation: shieldFloat1 20s ease-in-out infinite;
+    animation: fireFloat1 8s ease-in-out infinite;
   }
 
-  /* Shield elements background layer 2 */
+  /* Fire elements background layer 2 */
   body::after {
     content: '';
     position: fixed;
@@ -63,26 +63,26 @@
     height: 120vh;
     z-index: -2;
     background-image:
-      /* Additional large shields */
-      radial-gradient(ellipse 44px 54px at 35% 25%, rgba(212, 175, 55, 0.8) 0%, rgba(212, 175, 55, 0.6) 30%, rgba(212, 175, 55, 0.3) 60%, transparent 80%),
-      radial-gradient(ellipse 39px 49px at 65% 45%, rgba(25, 25, 112, 0.7) 0%, rgba(25, 25, 112, 0.5) 30%, rgba(25, 25, 112, 0.2) 60%, transparent 80%),
-      radial-gradient(ellipse 41px 51px at 20% 65%, rgba(34, 139, 34, 0.8) 0%, rgba(34, 139, 34, 0.6) 30%, rgba(34, 139, 34, 0.3) 60%, transparent 80%),
-      radial-gradient(ellipse 34px 44px at 80% 80%, rgba(220, 20, 60, 0.9) 0%, rgba(220, 20, 60, 0.7) 30%, rgba(220, 20, 60, 0.4) 60%, transparent 80%),
+      /* Additional large flames */
+      radial-gradient(ellipse 65px 130px at 35% 25%, rgba(255, 140, 0, 0.8) 0%, rgba(255, 215, 0, 0.6) 30%, rgba(255, 255, 0, 0.4) 60%, transparent 80%),
+      radial-gradient(ellipse 48px 96px at 65% 45%, rgba(255, 0, 0, 0.7) 0%, rgba(255, 69, 0, 0.5) 30%, rgba(255, 140, 0, 0.3) 60%, transparent 80%),
+      radial-gradient(ellipse 58px 116px at 20% 65%, rgba(220, 20, 60, 0.8) 0%, rgba(255, 69, 0, 0.6) 30%, rgba(255, 140, 0, 0.4) 60%, transparent 80%),
+      radial-gradient(ellipse 42px 84px at 80% 80%, rgba(255, 69, 0, 0.9) 0%, rgba(255, 140, 0, 0.7) 30%, rgba(255, 215, 0, 0.5) 60%, transparent 80%),
       
-      /* Protective aura shields */
-      radial-gradient(ellipse 50px 60px at 50% 20%, rgba(255, 215, 0, 0.4) 0%, rgba(255, 215, 0, 0.2) 40%, transparent 70%),
-      radial-gradient(ellipse 45px 55px at 25% 50%, rgba(0, 255, 255, 0.3) 0%, rgba(0, 255, 255, 0.1) 40%, transparent 70%),
-      radial-gradient(ellipse 48px 58px at 75% 75%, rgba(255, 0, 255, 0.4) 0%, rgba(255, 0, 255, 0.2) 40%, transparent 70%),
+      /* Fire wisps */
+      radial-gradient(ellipse 70px 140px at 50% 20%, rgba(255, 215, 0, 0.4) 0%, rgba(255, 255, 0, 0.2) 40%, transparent 70%),
+      radial-gradient(ellipse 55px 110px at 25% 50%, rgba(255, 140, 0, 0.5) 0%, rgba(255, 215, 0, 0.3) 40%, transparent 70%),
+      radial-gradient(ellipse 62px 124px at 75% 75%, rgba(255, 69, 0, 0.6) 0%, rgba(255, 140, 0, 0.4) 40%, transparent 70%),
       
-      /* Shield sparkles */
-      radial-gradient(circle 4px at 15% 35%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 20%, transparent 30%),
-      radial-gradient(circle 3px at 85% 60%, rgba(212, 175, 55, 1) 0%, rgba(212, 175, 55, 0.8) 20%, transparent 30%),
-      radial-gradient(circle 5px at 55% 85%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 20%, transparent 30%);
+      /* Fire embers */
+      radial-gradient(circle 4px at 15% 35%, rgba(255, 255, 255, 1) 0%, rgba(255, 215, 0, 0.8) 20%, transparent 30%),
+      radial-gradient(circle 3px at 85% 60%, rgba(255, 140, 0, 1) 0%, rgba(255, 69, 0, 0.8) 20%, transparent 30%),
+      radial-gradient(circle 5px at 55% 85%, rgba(255, 255, 255, 1) 0%, rgba(255, 215, 0, 0.8) 20%, transparent 30%);
     
-    animation: shieldFloat2 15s ease-in-out infinite reverse;
+    animation: fireFloat2 6s ease-in-out infinite reverse;
   }
 
-  /* Additional shield protection layer */
+  /* Additional fire intensity layer */
   .casino-overlay::before {
     content: '';
     position: fixed;
@@ -92,19 +92,19 @@
     height: 110vh;
     z-index: -1;
     background-image:
-      /* Defensive shield formations */
-      radial-gradient(ellipse 60px 75px at 20% 30%, rgba(220, 20, 60, 0.3) 0%, rgba(220, 20, 60, 0.1) 50%, transparent 80%),
-      radial-gradient(ellipse 55px 70px at 80% 70%, rgba(34, 139, 34, 0.4) 0%, rgba(34, 139, 34, 0.2) 50%, transparent 80%),
+      /* Intense fire cores */
+      radial-gradient(ellipse 80px 160px at 20% 30%, rgba(255, 0, 0, 0.3) 0%, rgba(255, 69, 0, 0.2) 50%, transparent 80%),
+      radial-gradient(ellipse 75px 150px at 80% 70%, rgba(255, 69, 0, 0.4) 0%, rgba(255, 140, 0, 0.3) 50%, transparent 80%),
       
-      /* Shield borders and outlines */
-      radial-gradient(ellipse 32px 40px at 60% 40%, transparent 0%, transparent 70%, rgba(255, 255, 255, 0.8) 72%, rgba(255, 255, 255, 0.6) 75%, transparent 80%),
-      radial-gradient(ellipse 28px 36px at 30% 70%, transparent 0%, transparent 70%, rgba(212, 175, 55, 0.9) 72%, rgba(212, 175, 55, 0.7) 75%, transparent 80%),
+      /* Fire trails */
+      linear-gradient(45deg, rgba(255, 69, 0, 0.6) 0%, rgba(255, 140, 0, 0.4) 30%, transparent 60%) 60% 40% / 80px 160px,
+      linear-gradient(-45deg, rgba(255, 140, 0, 0.5) 0%, rgba(255, 215, 0, 0.3) 30%, transparent 60%) 30% 70% / 70px 140px,
       
-      /* Protection energy fields */
-      radial-gradient(circle 25px at 45% 25%, rgba(0, 191, 255, 0.6) 0%, rgba(0, 191, 255, 0.3) 40%, transparent 70%),
-      radial-gradient(circle 20px at 75% 55%, rgba(255, 20, 147, 0.7) 0%, rgba(255, 20, 147, 0.4) 40%, transparent 70%);
+      /* Fire bursts */
+      radial-gradient(circle 20px at 45% 25%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 215, 0, 0.6) 40%, transparent 70%),
+      radial-gradient(circle 15px at 75% 55%, rgba(255, 215, 0, 0.9) 0%, rgba(255, 140, 0, 0.7) 40%, transparent 70%);
     
-    animation: shieldRotate 25s linear infinite;
+    animation: fireIntensity 4s linear infinite;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -189,77 +189,77 @@
     }
   }
 
-  /* Shield element animations */
-  @keyframes shieldFloat1 {
+  /* Fire element animations */
+  @keyframes fireFloat1 {
     0% {
       transform: translateY(0%) translateX(0%) scale(1) rotate(0deg);
-      opacity: 0.8;
-    }
-    25% {
-      transform: translateY(-4%) translateX(-3%) scale(1.1) rotate(15deg);
       opacity: 0.9;
     }
+    25% {
+      transform: translateY(-8%) translateX(-2%) scale(1.2) rotate(5deg);
+      opacity: 1;
+    }
     50% {
-      transform: translateY(-8%) translateX(2%) scale(0.9) rotate(30deg);
+      transform: translateY(-15%) translateX(1%) scale(0.8) rotate(10deg);
       opacity: 0.7;
     }
     75% {
-      transform: translateY(-5%) translateX(-1%) scale(1.05) rotate(45deg);
-      opacity: 0.85;
+      transform: translateY(-10%) translateX(-1%) scale(1.1) rotate(15deg);
+      opacity: 0.9;
     }
     100% {
-      transform: translateY(0%) translateX(0%) scale(1) rotate(60deg);
-      opacity: 0.8;
+      transform: translateY(0%) translateX(0%) scale(1) rotate(20deg);
+      opacity: 0.9;
     }
   }
 
-  @keyframes shieldFloat2 {
+  @keyframes fireFloat2 {
     0% {
       transform: translateX(0%) translateY(0%) scale(1) rotate(0deg);
-      opacity: 0.6;
-    }
-    20% {
-      transform: translateX(-3%) translateY(-5%) scale(1.15) rotate(-20deg);
       opacity: 0.8;
     }
+    20% {
+      transform: translateX(-2%) translateY(-12%) scale(1.3) rotate(-8deg);
+      opacity: 1;
+    }
     40% {
-      transform: translateX(4%) translateY(-9%) scale(0.85) rotate(-40deg);
-      opacity: 0.5;
+      transform: translateX(3%) translateY(-20%) scale(0.7) rotate(-16deg);
+      opacity: 0.6;
     }
     60% {
-      transform: translateX(-2%) translateY(-6%) scale(1.08) rotate(-60deg);
-      opacity: 0.75;
+      transform: translateX(-1%) translateY(-14%) scale(1.15) rotate(-24deg);
+      opacity: 0.85;
     }
     80% {
-      transform: translateX(3%) translateY(-3%) scale(0.95) rotate(-80deg);
-      opacity: 0.65;
+      transform: translateX(2%) translateY(-6%) scale(0.9) rotate(-32deg);
+      opacity: 0.75;
     }
     100% {
-      transform: translateX(0%) translateY(0%) scale(1) rotate(-100deg);
-      opacity: 0.6;
+      transform: translateX(0%) translateY(0%) scale(1) rotate(-40deg);
+      opacity: 0.8;
     }
   }
 
-  @keyframes shieldRotate {
+  @keyframes fireIntensity {
     0% {
       transform: rotate(0deg) scale(1);
-      opacity: 0.4;
+      opacity: 0.5;
     }
     25% {
-      transform: rotate(90deg) scale(1.2);
-      opacity: 0.6;
+      transform: rotate(90deg) scale(1.4);
+      opacity: 0.8;
     }
     50% {
-      transform: rotate(180deg) scale(0.8);
-      opacity: 0.3;
+      transform: rotate(180deg) scale(0.6);
+      opacity: 0.4;
     }
     75% {
-      transform: rotate(270deg) scale(1.1);
-      opacity: 0.5;
+      transform: rotate(270deg) scale(1.2);
+      opacity: 0.7;
     }
     100% {
       transform: rotate(360deg) scale(1);
-      opacity: 0.4;
+      opacity: 0.5;
     }
   }
 
