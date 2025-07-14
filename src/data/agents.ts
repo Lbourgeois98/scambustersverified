@@ -26,14 +26,6 @@ export const agents: Agent[] = [
     contactEmail: 'support@megamoney.com'
   },
   {
-    id: '4',
-    name: 'Denden Gaming',
-    verificationId: 'SB-45678',
-    status: 'verified',
-    website: 'https://www.facebook.com/share/19Ro6iiCCv/',
-    contactEmail: 'support@dendengaming.com'
-  },
-  {
     id: '5',
     name: 'The Lounge',
     verificationId: 'SB-56789',
