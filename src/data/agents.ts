@@ -50,14 +50,6 @@ export const agents: Agent[] = [
     contactEmail: 'season.james@gaming.com'
   },
   {
-    id: '8',
-    name: 'Luxury Slots',
-    verificationId: 'SB-89012',
-    status: 'verified',
-    website: 'https://www.facebook.com/share/g/1KzN4acfBv/?mibextid=wwXIfr',
-    contactEmail: 'support@luxuryslots.com'
-  },
-  {
     id: '9',
     name: 'Nick Sweeps',
     verificationId: 'SB-90123',
