@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-black text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8">
           <div>
             <div className="flex items-center mb-4">
               <img src="/logo-Photoroom.png" alt="ScamBusters Logo" className="h-12 mr-2" />
@@ -33,50 +33,6 @@ const Footer: React.FC = () => {
                 <MessagesSquare className="h-5 w-5" />
               </a>
             </div>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/verify" className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">
-                  Verify Agent
-                </Link>
-              </li>
-              <li>
-                <Link href="/agents" className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">
-                  Verified Agents
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">
-                  About Us
-                </Link>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-bold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-lg">Agent Verification</span>
-              </li>
-              <li>
-                <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-lg">Player Protection</span>
-              </li>
-              <li>
-                <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-lg">Fraud Prevention</span>
-              </li>
-              <li>
-                <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-lg">Compliance Monitoring</span>
-              </li>
-            </ul>
           </div>
         </div>
         
