@@ -31,16 +31,16 @@ const Header: React.FC = () => {
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-black shadow-md py-2' : 'bg-black/80 py-4'
+        scrolled ? 'bg-black shadow-md py-1 md:py-2' : 'bg-black/95 py-2 md:py-4'
       }`}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="container mx-auto px-3 md:px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <img src="/logo-Photoroom.png" alt="ScamBusters Logo" className="h-12 mr-2" />
+          <img src="/logo-Photoroom.png" alt="ScamBusters Logo" className="h-8 md:h-12 mr-2" />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-4">
+        <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
           <Link href="/" className="text-white hover:text-gold-400 transition-colors">Home</Link>
           <Link href="/verify" className="text-white hover:text-gold-400 transition-colors">Verify Agent</Link>
           <Link href="/agents" className="text-white hover:text-gold-400 transition-colors">Verified Agents</Link>
@@ -48,16 +48,16 @@ const Header: React.FC = () => {
           <Link href="/about" className="text-white hover:text-gold-400 transition-colors">About Us</Link>
           <button 
             onClick={handleContactAdmins}
-            className="bg-gold-500 hover:bg-gold-600 text-black px-4 py-2 rounded-md transition-colors flex items-center"
+            className="bg-gold-500 hover:bg-gold-600 text-black px-2 py-1 lg:px-4 lg:py-2 rounded-md transition-colors flex items-center text-sm lg:text-base"
           >
-            <Users className="h-4 w-4 mr-2" />
+            <Users className="h-3 w-3 lg:h-4 lg:w-4 mr-1 lg:mr-2" />
             Contact Admins
           </button>
           <Link 
             href="/verify" 
-            className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md transition-colors flex items-center"
+            className="bg-red-600 hover:bg-red-700 text-white px-2 py-1 lg:px-4 lg:py-2 rounded-md transition-colors flex items-center text-sm lg:text-base"
           >
-            <Search className="h-4 w-4 mr-2" />
+            <Search className="h-3 w-3 lg:h-4 lg:w-4 mr-1 lg:mr-2" />
             Verify Now
           </Link>
         </nav>
@@ -73,39 +73,39 @@ const Header: React.FC = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-black/95 absolute w-full">
-          <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <div className="md:hidden bg-black/98 absolute w-full backdrop-blur-sm">
+          <nav className="container mx-auto px-3 py-3 flex flex-col space-y-3">
             <Link 
               href="/" 
-              className="text-white hover:text-gold-400 transition-colors py-2 border-b border-gray-800"
+              className="text-white hover:text-gold-400 transition-colors py-2 border-b border-gray-800 text-sm"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
               href="/verify" 
-              className="text-white hover:text-gold-400 transition-colors py-2 border-b border-gray-800"
+              className="text-white hover:text-gold-400 transition-colors py-2 border-b border-gray-800 text-sm"
               onClick={() => setIsMenuOpen(false)}
             >
               Verify Agent
             </Link>
             <Link 
               href="/agents" 
-              className="text-white hover:text-gold-400 transition-colors py-2 border-b border-gray-800"
+              className="text-white hover:text-gold-400 transition-colors py-2 border-b border-gray-800 text-sm"
               onClick={() => setIsMenuOpen(false)}
             >
               Verified Agents
             </Link>
             <Link 
               href="/apply" 
-              className="text-white hover:text-gold-400 transition-colors py-2 border-b border-gray-800"
+              className="text-white hover:text-gold-400 transition-colors py-2 border-b border-gray-800 text-sm"
               onClick={() => setIsMenuOpen(false)}
             >
               Apply for Verification
             </Link>
             <Link 
               href="/about" 
-              className="text-white hover:text-gold-400 transition-colors py-2 border-b border-gray-800"
+              className="text-white hover:text-gold-400 transition-colors py-2 border-b border-gray-800 text-sm"
               onClick={() => setIsMenuOpen(false)}
             >
               About Us
@@ -115,14 +115,14 @@ const Header: React.FC = () => {
                 handleContactAdmins();
                 setIsMenuOpen(false);
               }}
-              className="bg-gold-500 hover:bg-gold-600 text-black px-4 py-2 rounded-md transition-colors flex items-center justify-center"
+              className="bg-gold-500 hover:bg-gold-600 text-black px-4 py-2 rounded-md transition-colors flex items-center justify-center text-sm"
             >
               <Users className="h-4 w-4 mr-2" />
               Contact Admins
             </button>
             <Link 
               href="/verify" 
-              className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md transition-colors flex items-center justify-center"
+              className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md transition-colors flex items-center justify-center text-sm"
               onClick={() => setIsMenuOpen(false)}
             >
               <Search className="h-4 w-4 mr-2" />
