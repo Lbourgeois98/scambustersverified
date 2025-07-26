@@ -6,6 +6,7 @@ import VerifyPage from './pages/VerifyPage';
 import AgentsPage from './pages/AgentsPage';
 import ApplyPage from './pages/ApplyPage';
 import AboutPage from './pages/AboutPage';
+import AgentBenefitsPage from './pages/AgentBenefitsPage';
 
 function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -45,6 +46,9 @@ function App() {
       case '/about':
         document.title = 'About Us | ScamBusters';
         return <AboutPage />;
+      case '/agent-benefits':
+        document.title = 'Agent Benefits | ScamBusters';
+        return <AgentBenefitsPage />;
       default:
         document.title = 'ScamBusters | Casino Agent Verification';
         return <HomePage />;
